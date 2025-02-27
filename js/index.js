@@ -13,11 +13,11 @@ console.log('알맞은 스크립트를 작성하세요');
 
 document.addEventListener('DOMContentLoaded', () => {
   const commentForm = document.querySelector('.comment-from');
-  const commentInput = commentForm.querySelector('input[type="text"]');
   const commentList = document.querySelector('.comment-list');
+  const commentInput = commentForm.querySelector('input[type="text"]');
   const submitButton = commentForm.querySelector('.btn-submit');
 
-  submitButton.addEventListener('click', () => {
+  const addComment = () => {
     const commentText = commentInput.value.trim();
     if (!commentText) {
       return;
@@ -36,9 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </li>
     `;
-
     commentList.insertAdjacentHTML('beforeend', commentItem);
     commentForm.reset();
     alert('댓글이 등록되었습니다');
+  };
+
+  commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+  });
+
+  submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    addComment();
+  });
+
+  commentInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+    }
   });
 });
