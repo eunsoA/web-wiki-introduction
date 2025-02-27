@@ -181,7 +181,7 @@ ol.contents li a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 40px;
+  height: var(--comment-button-height);
 }
 
 .comment-input-wrapper {
@@ -189,7 +189,7 @@ ol.contents li a {
   align-items: center;
   height: 100%;
   flex: 1;
-  padding: 0 12px;
+  padding-left: 12px;
   border: 1px solid var(--divider-color);
   gap: 18px;
 }
@@ -214,25 +214,26 @@ ol.contents li a {
 }
 
 .comment-author img {
-  width: 24px;
-  height: 24px;
+  width: var(--comment-author-size);
+  height: var(--comment-author-size);
 }
 
 .comment-author span {
   font-size: 12px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-gray0-color);
 }
 
 .comment-item{
   padding: 8px 16px;
-  border: 1px solid var(--divider-color);
+  border: 1px solid var(--comment-border-color);
 }
+
 .comment-content{
   padding: 10px 0 0 0;
   font-size: 12px;
   font-weight: 400;
-  color: #000;
+  color: var(--text-gray0-color);
   line-height: normal;
 }
 
@@ -245,22 +246,22 @@ ol.contents li a {
 }
 
 .button-group button {
-  width: 70px;
-  height: 40px;
+  width: var(--comment-button-width);
+  height: var(--comment-button-height);
   border: none;
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.48px;
-  color: #000;
+  color: var(--text-gray0-color);
 }
 
 .button-group .btn-submit {
-  background-color: #D7F9F6;
+  background-color: var(--button-submit-color);
 }
 
 .button-group .btn-reset {
-  background-color: #D8D8D8;
+  background-color: var(--button-reset-color);
 }
 
 footer {
@@ -289,4 +290,14 @@ footer p {
 
   --divider-color: #efefef;
   --font-default-color: #333;
+
+  --comment-author-size: 24px;
+  --comment-border-color: #E9E9E9;
+
+  --comment-button-height: 40px;
+  --comment-button-width: 70px;
+  --button-reset-color: #D8D8D8;
+  --button-submit-color: #D7F9F6;
+
+  --text-gray0-color: #000;
 }
