@@ -173,6 +173,74 @@ ol.contents li a {
   margin: 0 auto;
 }
 
+.comment-from fieldset{
+  border: none;
+}
+
+.comment-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+}
+
+.comment-input-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  padding: 0 12px;
+  border: 1px solid var(--divider-color);
+  gap: 18px;
+}
+
+.comment-input-wrapper input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  outline: none;
+}
+
+.comment-input-wrapper input::placeholder {
+  color: #CCC;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-author img {
+  width: 24px;
+  height: 24px;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button-group button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  color: #000;
+}
+
+.button-group .btn-submit {
+  background-color: #D7F9F6;
+}
+
+.button-group .btn-reset {
+  background-color: #D8D8D8;
+}
+
 footer {
   display: flex;
   flex-direction: column;
