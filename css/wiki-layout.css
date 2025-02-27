@@ -218,6 +218,24 @@ ol.contents li a {
   height: 24px;
 }
 
+.comment-author span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+
+.comment-item{
+  padding: 8px 16px;
+  border: 1px solid var(--divider-color);
+}
+.comment-content{
+  padding: 10px 0 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  line-height: normal;
+}
+
 .button-group {
   display: flex;
 }
