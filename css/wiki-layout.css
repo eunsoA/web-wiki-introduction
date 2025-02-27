@@ -264,6 +264,13 @@ ol.contents li a {
   background-color: var(--button-reset-color);
 }
 
+.no-comments {
+  padding: 30px;
+  font-size: 14px;
+  text-align: center;
+  color: #CCC;
+}
+
 footer {
   display: flex;
   flex-direction: column;

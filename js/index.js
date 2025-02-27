@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const commentList = document.querySelector('.comment-list');
   const commentInput = commentForm.querySelector('input[type="text"]');
   const submitButton = commentForm.querySelector('.btn-submit');
+  const noCommentsDiv = commentList.querySelector('.no-comments');
 
   const addComment = () => {
     const commentText = commentInput.value.trim();
     if (!commentText) {
       return;
+    }
+
+    if (noCommentsDiv) {
+      noCommentsDiv.remove();
     }
 
     const commentItem = `
