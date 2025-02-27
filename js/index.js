@@ -17,3 +17,35 @@ console.log(
 );
 
 console.log("알맞은 스크립트를 작성하세요");
+
+document.addEventListener('DOMContentLoaded', () => {
+  const commentForm = document.querySelector('.comment-from');
+  const commentInput = commentForm.querySelector('input[type="text"]');
+  const commentList = document.querySelector('.comment-list');
+  const submitButton = commentForm.querySelector('.btn-submit');
+
+  submitButton.addEventListener('click', () => {
+    const commentText = commentInput.value.trim();
+    if (!commentText) {
+      return;
+    }
+
+    const commentItem = `
+      <li>
+        <div class="comment-item">
+          <div class="comment-author">
+            <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+            <span>방문자</span>
+          </div>
+          <div class="comment-content">
+            ${commentText}
+          </div>
+        </div>
+      </li>
+    `;
+
+    commentList.insertAdjacentHTML('beforeend', commentItem);
+    commentForm.reset();
+    alert('댓글이 등록되었습니다');
+  });
+});

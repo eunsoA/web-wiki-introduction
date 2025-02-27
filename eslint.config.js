@@ -14,6 +14,8 @@ export default [
       globals: {
         ...globals.node,
         ...globals.jest,
+        document: 'readonly',
+        alert: 'readonly',
       },
     },
 
