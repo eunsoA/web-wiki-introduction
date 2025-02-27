@@ -175,6 +175,7 @@ ol.contents li a {
 
 .comment-from fieldset{
   border: none;
+  margin: 24px 0;
 }
 
 .comment-wrapper {
@@ -234,6 +235,10 @@ ol.contents li a {
   font-weight: 400;
   color: #000;
   line-height: normal;
+}
+
+.comment-list li:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .button-group {
